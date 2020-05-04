@@ -1,0 +1,1796 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowMinHeight": 800,
+	"windowMaxHeight": 32000,
+	"width": 950,
+	"height": 950,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "841pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 30,
+					"left": 50,
+					"width": 850,
+					"height": 890,
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"CheckBoxTrace": {
+					"type": "checkbox",
+					"top": 890,
+					"left": 822,
+					"width": 70,
+					"height": 20,
+					"sizingY": "move",
+					"text": "Trace",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnTrace"
+				}
+			}
+		},
+		{
+			"objects": {
+				"QueryAndLoop4": {
+					"type": "input",
+					"top": 140,
+					"left": 90,
+					"width": 750,
+					"height": 721,
+					"dataSource": "_Descriptions{1}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				}
+			}
+		},
+		{
+			"objects": {
+				"QueryAndLoop1": {
+					"type": "input",
+					"top": 70,
+					"left": 90,
+					"width": 750,
+					"height": 80,
+					"dataSource": "_Descriptions{2}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"ListBoxPersons": {
+					"type": "listbox",
+					"top": 280,
+					"left": 90,
+					"width": 335,
+					"height": 161,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"dataSource": "Form:C1466.persons",
+					"currentItemSource": "",
+					"currentItemPositionSource": "",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"metaSource": "colorHighAge ",
+					"sizingY": "fixed",
+					"columns": [
+						{
+							"name": "Column14",
+							"dataSource": "This:C1470.firstname",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header14",
+								"text": "Firstname"
+							},
+							"footer": {
+								"name": "Footer14",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column23",
+							"dataSource": "This:C1470.lastname",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header23",
+								"text": "Lastname"
+							},
+							"footer": {
+								"name": "Footer23",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column27",
+							"dataSource": "This:C1470.age",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header24",
+								"text": "Age"
+							},
+							"footer": {
+								"name": "Footer24",
+								"timeFormat": "hh_mm_ss"
+							},
+							"textAlign": "center"
+						}
+					]
+				},
+				"ActivityLanguageOrderByFormula": {
+					"type": "button",
+					"text": "Run",
+					"top": 320,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageOrderByFormula.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Start1": {
+					"type": "button",
+					"text": "Start recording",
+					"top": 210,
+					"left": 130,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Start1.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 517,
+					"top": 170,
+					"width": 60,
+					"height": 20,
+					"dataSource": "Form:C1466.duration",
+					"events": [
+						"onAfterEdit"
+					],
+					"dataSourceTypeHint": "number",
+					"numberFormat": "0.000",
+					"method": "ObjectMethods/Input1.4dm",
+					"sizingY": "fixed"
+				},
+				"ActivityLanguageFind": {
+					"type": "button",
+					"text": "Run",
+					"top": 400,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageFind.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 630,
+					"top": 400,
+					"width": 50,
+					"height": 20,
+					"dataSource": "Form:C1466.age",
+					"dataSourceTypeHint": "number",
+					"sizingY": "fixed"
+				},
+				"ListBoxActivities": {
+					"type": "listbox",
+					"top": 590,
+					"left": 90,
+					"width": 785,
+					"height": 221,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "41px",
+					"dataSource": "Form:C1466.activities",
+					"currentItemSource": "",
+					"currentItemPositionSource": "",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"metaSource": "colorHighAge ",
+					"sizingY": "fixed",
+					"events": [],
+					"columns": [
+						{
+							"header": {
+								"name": "Header27",
+								"text": "Duration"
+							},
+							"name": "Column32",
+							"dataSource": "This:C1470.activityDuration",
+							"width": 60,
+							"footer": {
+								"name": "Footer27"
+							},
+							"events": []
+						},
+						{
+							"header": {
+								"name": "Header29",
+								"text": "Member method",
+								"dataSource": ""
+							},
+							"name": "Column34",
+							"dataSource": "This:C1470.activityData.memberMethod",
+							"footer": {
+								"name": "Footer29"
+							},
+							"width": 100
+						},
+						{
+							"header": {
+								"name": "Header32",
+								"text": "Parameters"
+							},
+							"name": "Column37",
+							"dataSource": "This:C1470.activityData.parameters",
+							"footer": {
+								"name": "Footer32"
+							},
+							"width": 150
+						},
+						{
+							"header": {
+								"name": "Header33",
+								"text": "Form event"
+							},
+							"name": "Column38",
+							"dataSource": "This:C1470.activityData.formEvent",
+							"footer": {
+								"name": "Footer33"
+							},
+							"width": 100
+						},
+						{
+							"header": {
+								"name": "Header34",
+								"text": "Command name"
+							},
+							"name": "Column39",
+							"dataSource": "This:C1470.activityData.commandName",
+							"footer": {
+								"name": "Footer34"
+							},
+							"width": 150
+						},
+						{
+							"header": {
+								"name": "Header36",
+								"text": "Command  \\ number"
+							},
+							"name": "Column40",
+							"dataSource": "This:C1470.activityData.commandNumber",
+							"footer": {
+								"name": "Footer36"
+							},
+							"width": 80
+						},
+						{
+							"header": {
+								"name": "Header37",
+								"text": "Function name"
+							},
+							"name": "Column41",
+							"dataSource": "This:C1470.activityData.functionName",
+							"footer": {
+								"name": "Footer37"
+							},
+							"width": 130
+						}
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 470,
+					"top": 860,
+					"width": 340,
+					"height": 40,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{1}",
+					"styledText": true,
+					"sizingY": "fixed"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 597,
+					"top": 170,
+					"width": 150,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{2}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Run some 4D language here",
+					"top": 250,
+					"left": 130,
+					"width": 390,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Find persons with age >=",
+					"top": 400,
+					"left": 440,
+					"width": 180,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"ActivityLanguageAll": {
+					"type": "button",
+					"text": "Run",
+					"top": 280,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageAll.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"ActivityLanguageOrderBy": {
+					"type": "button",
+					"text": "Run",
+					"top": 360,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageOrderBy.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 90,
+					"top": 450,
+					"width": 200,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{3}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Input10": {
+					"type": "input",
+					"left": 326,
+					"top": 559,
+					"width": 0,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{7}",
+					"styledText": true,
+					"textAlign": "right",
+					"sizingY": "fixed"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Check the language activity here",
+					"top": 560,
+					"left": 130,
+					"width": 250,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"Text12": {
+					"type": "text",
+					"text": "1",
+					"top": 170,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text13": {
+					"type": "text",
+					"text": "2",
+					"top": 250,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text14": {
+					"type": "text",
+					"text": "3",
+					"top": 560,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text21": {
+					"type": "text",
+					"text": "Order persons by lastname length",
+					"top": 320,
+					"left": 440,
+					"width": 250,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text22": {
+					"type": "text",
+					"text": "Order persons by age",
+					"top": 360,
+					"left": 440,
+					"width": 200,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"executedCode1": {
+					"type": "input",
+					"left": 90,
+					"top": 500,
+					"width": 750,
+					"height": 50,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"dataSource": "",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text29": {
+					"type": "text",
+					"text": "Code executed:",
+					"top": 480,
+					"left": 90,
+					"width": 200,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 375,
+					"top": 450,
+					"width": 50,
+					"height": 20,
+					"dataSource": "ds:C1482.Persons.all().length",
+					"enterable": false,
+					"fill": "transparent",
+					"sizingY": "fixed"
+				},
+				"ActivityLanguageStop": {
+					"type": "button",
+					"text": "Stop recording + empty recorded activity",
+					"top": 860,
+					"left": 140,
+					"width": 320,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageStop.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 300,
+					"top": 210,
+					"width": 530,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{19}",
+					"styledText": true,
+					"sizingY": "fixed"
+				},
+				"Text30": {
+					"type": "text",
+					"text": "Get all persons",
+					"top": 280,
+					"left": 440,
+					"width": 250,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"ActivityLanguageView": {
+					"type": "button",
+					"text": "View activity",
+					"top": 560,
+					"left": 440,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityLanguageView.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input13": {
+					"type": "input",
+					"left": 630,
+					"top": 430,
+					"width": 250,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{20}",
+					"styledText": true,
+					"textAlign": "left",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Text27": {
+					"type": "text",
+					"text": "Record operations whose duration exceeds (seconds)",
+					"top": 170,
+					"left": 130,
+					"width": 368,
+					"height": 16,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"Input9": {
+					"type": "input",
+					"left": 90,
+					"top": 820,
+					"width": 800,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{12}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text20": {
+					"type": "text",
+					"text": "4",
+					"top": 860,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				}
+			},
+			"entryOrder": [
+				"Input10"
+			]
+		},
+		{
+			"objects": {
+				"QueryAndLoop2": {
+					"type": "input",
+					"top": 70,
+					"left": 90,
+					"width": 750,
+					"height": 120,
+					"dataSource": "_Descriptions{3}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"ListBoxPersons2": {
+					"type": "listbox",
+					"top": 320,
+					"left": 90,
+					"width": 335,
+					"height": 161,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"dataSource": "Form:C1466.persons",
+					"currentItemSource": "",
+					"currentItemPositionSource": "",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"metaSource": "colorHighAge ",
+					"sizingY": "fixed",
+					"columns": [
+						{
+							"name": "Column15",
+							"dataSource": "This:C1470.firstname",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header15",
+								"text": "Firstname"
+							},
+							"footer": {
+								"name": "Footer15",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column16",
+							"dataSource": "This:C1470.lastname",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header16",
+								"text": "Lastname"
+							},
+							"footer": {
+								"name": "Footer16",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column17",
+							"dataSource": "This:C1470.age",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header17",
+								"text": "Age"
+							},
+							"footer": {
+								"name": "Footer17",
+								"timeFormat": "hh_mm_ss"
+							},
+							"textAlign": "center"
+						}
+					]
+				},
+				"ActivityNetworkOrderByFormula": {
+					"type": "button",
+					"text": "Run",
+					"top": 360,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkOrderByFormula.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Start2": {
+					"type": "button",
+					"text": "Start recording",
+					"top": 250,
+					"left": 130,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Start2.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input22": {
+					"type": "input",
+					"left": 490,
+					"top": 200,
+					"width": 60,
+					"height": 20,
+					"dataSource": "Form:C1466.duration",
+					"events": [
+						"onAfterEdit"
+					],
+					"method": "ObjectMethods/Input2.4dm",
+					"dataSourceTypeHint": "number",
+					"numberFormat": "0.000",
+					"sizingY": "fixed"
+				},
+				"ActivityNetworkFind": {
+					"type": "button",
+					"text": "Run",
+					"top": 440,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkFind.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input23": {
+					"type": "input",
+					"left": 630,
+					"top": 440,
+					"width": 50,
+					"height": 20,
+					"dataSource": "Form:C1466.age",
+					"dataSourceTypeHint": "number",
+					"sizingY": "fixed"
+				},
+				"ListBoxActivities2": {
+					"type": "listbox",
+					"top": 680,
+					"left": 90,
+					"width": 725,
+					"height": 161,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "41px",
+					"dataSource": "Form:C1466.activities",
+					"currentItemSource": "Form:C1466.selectedActivity",
+					"currentItemPositionSource": "",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "automatic",
+					"metaSource": "colorHighAge ",
+					"sizingY": "fixed",
+					"events": [],
+					"columns": [
+						{
+							"header": {
+								"name": "Header20",
+								"text": "Duration"
+							},
+							"name": "Column20",
+							"dataSource": "This:C1470.activityDuration",
+							"width": 80,
+							"footer": {
+								"name": "Footer20"
+							},
+							"events": []
+						},
+						{
+							"header": {
+								"name": "Header22",
+								"text": "System ID",
+								"dataSource": ""
+							},
+							"name": "Column22",
+							"dataSource": "This:C1470.activityData.systemID",
+							"footer": {
+								"name": "Footer22"
+							},
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "Header35",
+								"text": "Component"
+							},
+							"name": "Column24",
+							"dataSource": "This:C1470.activityData.component",
+							"footer": {
+								"name": "Footer35"
+							},
+							"width": 100
+						},
+						{
+							"header": {
+								"name": "Header38",
+								"text": "Request ID"
+							},
+							"name": "Column25",
+							"dataSource": "This:C1470.activityData.request",
+							"footer": {
+								"name": "Footer38"
+							},
+							"width": 100,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header39",
+								"text": "Bytes in"
+							},
+							"name": "Column26",
+							"dataSource": "This:C1470.activityData.bytesIn",
+							"footer": {
+								"name": "Footer39"
+							},
+							"width": 80,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header40",
+								"text": "Bytes out"
+							},
+							"name": "Column28",
+							"dataSource": "This:C1470.activityData.bytesOut",
+							"footer": {
+								"name": "Footer40"
+							},
+							"width": 80,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header41",
+								"text": "Preemptive / cooperative"
+							},
+							"name": "Column29",
+							"dataSource": "Choose:C955(This:C1470.activityData.taskKind=\"p\";\"preemptive\";\"cooperative\")",
+							"footer": {
+								"name": "Footer41"
+							},
+							"width": 150
+						}
+					]
+				},
+				"Input24": {
+					"type": "input",
+					"left": 300,
+					"top": 250,
+					"width": 530,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{13}",
+					"styledText": true,
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input25": {
+					"type": "input",
+					"left": 490,
+					"top": 230,
+					"width": 150,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{2}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Run some network activity here",
+					"top": 300,
+					"left": 130,
+					"width": 390,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"ActivityNetworkAll": {
+					"type": "button",
+					"text": "Run",
+					"top": 320,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkAll.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"ActivityNetworkOrderBy": {
+					"type": "button",
+					"text": "Run",
+					"top": 400,
+					"left": 710,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkOrderBy.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input26": {
+					"type": "input",
+					"left": 90,
+					"top": 490,
+					"width": 200,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{3}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Input30": {
+					"type": "input",
+					"left": 326,
+					"top": 639,
+					"width": 0,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{7}",
+					"styledText": true,
+					"textAlign": "right",
+					"sizingY": "fixed"
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Check the network activity here",
+					"top": 650,
+					"left": 130,
+					"width": 280,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"Text15": {
+					"type": "text",
+					"text": "1",
+					"top": 200,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text16": {
+					"type": "text",
+					"text": "2",
+					"top": 300,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text17": {
+					"type": "text",
+					"text": "3",
+					"top": 650,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text23": {
+					"type": "text",
+					"text": "Find persons with age >=",
+					"top": 440,
+					"left": 440,
+					"width": 180,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text24": {
+					"type": "text",
+					"text": "Order persons by lastname length",
+					"top": 360,
+					"left": 440,
+					"width": 250,
+					"height": 20,
+					"sizingY": "fixed"
+				},
+				"Text25": {
+					"type": "text",
+					"text": "Order persons by age",
+					"top": 400,
+					"left": 440,
+					"width": 200,
+					"height": 20,
+					"sizingY": "fixed"
+				},
+				"executedCode2": {
+					"type": "input",
+					"left": 90,
+					"top": 540,
+					"width": 750,
+					"height": 100,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"dataSource": "",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text28": {
+					"type": "text",
+					"text": "Code executed:",
+					"top": 520,
+					"left": 90,
+					"width": 200,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				},
+				"Input17": {
+					"type": "input",
+					"left": 630,
+					"top": 470,
+					"width": 250,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{20}",
+					"styledText": true,
+					"textAlign": "left",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Text32": {
+					"type": "text",
+					"text": "Get all persons",
+					"top": 320,
+					"left": 440,
+					"width": 250,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"ActivityNetworkView": {
+					"type": "button",
+					"text": "View activity",
+					"top": 650,
+					"left": 390,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkView.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"ActivityNetworkStop": {
+					"type": "button",
+					"text": "Stop recording + empty recorded activity",
+					"top": 880,
+					"left": 140,
+					"width": 320,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityNetworkStop.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input20": {
+					"type": "input",
+					"left": 470,
+					"top": 880,
+					"width": 340,
+					"height": 40,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{1}",
+					"styledText": true,
+					"sizingY": "fixed"
+				},
+				"MonitorNetworkOnServer": {
+					"type": "checkbox",
+					"text": "Record activity on the server",
+					"top": 200,
+					"left": 600,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.monitorOnServer",
+					"dataSourceTypeHint": "boolean",
+					"sizingY": "fixed"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Record operations whose duration exceeds (seconds)",
+					"top": 200,
+					"left": 130,
+					"width": 368,
+					"height": 16,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"Input18": {
+					"type": "input",
+					"left": 90,
+					"top": 850,
+					"width": 500,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{12}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text31": {
+					"type": "text",
+					"text": "4",
+					"top": 880,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				}
+			},
+			"entryOrder": [
+				"Input30"
+			]
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 354,
+					"left": 438,
+					"width": 450,
+					"height": 130,
+					"fill": "transparent",
+					"stroke": "#da70d6",
+					"strokeDashArray": [
+						6,
+						2
+					],
+					"sizingY": "fixed"
+				},
+				"ListBoxActivities3": {
+					"type": "listbox",
+					"top": 670,
+					"left": 90,
+					"width": 750,
+					"height": 181,
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"dataSource": "Form:C1466.activities",
+					"currentItemSource": "",
+					"currentItemPositionSource": "",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"metaSource": "colorHighAge ",
+					"sizingY": "fixed",
+					"events": [
+						"onMouseLeave",
+						"onMouseMove"
+					],
+					"columns": [
+						{
+							"header": {
+								"name": "Header1",
+								"text": "Duration"
+							},
+							"name": "Column1",
+							"dataSource": "This:C1470.activityData.duration",
+							"width": 60,
+							"footer": {
+								"name": "Footer1"
+							},
+							"events": [],
+							"textAlign": "center"
+						},
+						{
+							"name": "Column2",
+							"dataSource": "This:C1470.activityData.startTime",
+							"width": 180,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header2",
+								"text": "Start time"
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"name": "Column4",
+							"dataSource": "This:C1470.activityData.message",
+							"width": 320,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header4",
+								"text": "Message"
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss"
+							}
+						},
+						{
+							"header": {
+								"name": "Header5",
+								"text": "Client user name"
+							},
+							"name": "Column5",
+							"dataSource": "This:C1470.activityData.dbContextInfo.user_name",
+							"footer": {
+								"name": "Footer5"
+							}
+						}
+					]
+				},
+				"ListBoxPersons3": {
+					"type": "listbox",
+					"top": 320,
+					"left": 90,
+					"width": 335,
+					"height": 161,
+					"resizingMode": "legacy",
+					"listboxType": "currentSelection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"headerHeight": "21px",
+					"selectionMode": "none",
+					"scrollbarHorizontal": "automatic",
+					"sizingY": "fixed",
+					"table": "Persons",
+					"columns": [
+						{
+							"name": "Column3",
+							"width": 240,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header3",
+								"text": "Full name"
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss"
+							},
+							"dataSource": "[Persons:3]firstname:7+\"-\"+[Persons:3]lastname:3"
+						},
+						{
+							"name": "Column6",
+							"width": 80,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"events": [],
+							"header": {
+								"name": "Header6",
+								"text": "Age"
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss"
+							},
+							"textAlign": "center",
+							"dataSource": "[Persons:3]age:2"
+						}
+					]
+				},
+				"Start3": {
+					"type": "button",
+					"text": "Start recording",
+					"top": 260,
+					"left": 130,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Start3.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input12": {
+					"type": "input",
+					"left": 300,
+					"top": 260,
+					"width": 530,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{8}",
+					"styledText": true,
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Run some 4D operations here",
+					"top": 300,
+					"left": 130,
+					"width": 300,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsAll": {
+					"type": "button",
+					"text": "All",
+					"top": 320,
+					"left": 445,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsAll.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsOrderBy": {
+					"type": "button",
+					"text": "Order persons by age",
+					"top": 320,
+					"left": 540,
+					"width": 190,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsOrderBy.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"executedCode3": {
+					"type": "input",
+					"left": 90,
+					"top": 520,
+					"width": 750,
+					"height": 100,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "dotted",
+					"dataSource": "",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Check the 4D data activity here",
+					"top": 640,
+					"left": 130,
+					"width": 250,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"QueryAndLoop3": {
+					"type": "input",
+					"top": 90,
+					"left": 70,
+					"width": 750,
+					"height": 110,
+					"dataSource": "_Descriptions{4}",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"sizingY": "fixed"
+				},
+				"Input21": {
+					"type": "input",
+					"left": 90,
+					"top": 860,
+					"width": 700,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{12}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "1",
+					"top": 210,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text18": {
+					"type": "text",
+					"text": "2",
+					"top": 300,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text19": {
+					"type": "text",
+					"text": "3",
+					"top": 640,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				},
+				"Text10": {
+					"type": "text",
+					"text": "Find persons with full name length >=16",
+					"top": 440,
+					"left": 450,
+					"width": 300,
+					"height": 20,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text26": {
+					"type": "text",
+					"text": "Find persons  whose age is over the average",
+					"top": 400,
+					"left": 450,
+					"width": 300,
+					"height": 20,
+					"sizingY": "fixed"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 375,
+					"top": 484,
+					"width": 50,
+					"height": 20,
+					"dataSource": "Records in selection:C76([Persons:3])",
+					"enterable": false,
+					"fill": "transparent",
+					"sizingY": "fixed"
+				},
+				"Radio Button": {
+					"type": "radio",
+					"text": "Classic 4D",
+					"top": 360,
+					"left": 520,
+					"width": 120,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.classic",
+					"dataSourceTypeHint": "boolean",
+					"radioGroup": "Languages",
+					"sizingY": "fixed"
+				},
+				"Radio Button2": {
+					"type": "radio",
+					"text": "ORDA",
+					"top": 360,
+					"left": 730,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.orda",
+					"dataSourceTypeHint": "boolean",
+					"radioGroup": "Languages",
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsOrderByFormula4": {
+					"type": "button",
+					"text": "Run",
+					"top": 400,
+					"left": 760,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsOverage.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Radio Button1": {
+					"type": "radio",
+					"text": "SQL",
+					"top": 360,
+					"left": 640,
+					"width": 80,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.sql",
+					"dataSourceTypeHint": "boolean",
+					"radioGroup": "Languages",
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsOrderByFormula1": {
+					"type": "button",
+					"text": "Run",
+					"top": 440,
+					"left": 760,
+					"width": 90,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsFindLength.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 510,
+					"top": 210,
+					"width": 60,
+					"height": 20,
+					"dataSource": "Form:C1466.duration",
+					"events": [
+						"onAfterEdit"
+					],
+					"method": "ObjectMethods/Input6.4dm",
+					"dataSourceTypeHint": "number",
+					"numberFormat": "0.000",
+					"enterable": true,
+					"sizingY": "fixed"
+				},
+				"Input27": {
+					"type": "input",
+					"left": 510,
+					"top": 240,
+					"width": 150,
+					"height": 20,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{2}",
+					"styledText": true,
+					"textAlign": "left",
+					"sizingY": "fixed"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Record operations whose duration exceeds (seconds)",
+					"top": 210,
+					"left": 130,
+					"width": 368,
+					"height": 16,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"stroke": "#800080",
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsStop": {
+					"type": "button",
+					"text": "Stop recording + empty recorded activity",
+					"top": 880,
+					"left": 140,
+					"width": 320,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsStop.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Input28": {
+					"type": "input",
+					"left": 470,
+					"top": 880,
+					"width": 340,
+					"height": 40,
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "_TabLineCode{1}",
+					"styledText": true,
+					"sizingY": "fixed"
+				},
+				"MonitorDataOnServer": {
+					"type": "checkbox",
+					"text": "Record activity on the server",
+					"top": 210,
+					"left": 620,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.monitorOnServer",
+					"dataSourceTypeHint": "boolean",
+					"sizingY": "fixed"
+				},
+				"ActivityOperationsView": {
+					"type": "button",
+					"text": "View activity",
+					"top": 640,
+					"left": 430,
+					"width": 150,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ActivityOperationsView.4dm",
+					"focusable": false,
+					"sizingY": "fixed"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Code executed:",
+					"top": 500,
+					"left": 90,
+					"width": 200,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "automatic",
+					"sizingY": "fixed"
+				},
+				"Text33": {
+					"type": "text",
+					"text": "4",
+					"top": 880,
+					"left": 90,
+					"width": 30,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"fill": "#dda0dd",
+					"sizingY": "fixed"
+				}
+			},
+			"entryOrder": [
+				"Input28"
+			]
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}
