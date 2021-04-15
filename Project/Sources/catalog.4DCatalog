@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="HDI_Monitor_Activity" uuid="DEEA6026A5456E4C816E812D170EAF16" collation_locale="fr">
 	<schema name="DEFAULT_SCHEMA"/>
@@ -89,7 +89,7 @@
 			<table_ref uuid="2DC02D1D67D047FF89D989618BF37002" name="Persons"/>
 		</field_ref>
 	</index>
-	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0" data_file_path=":ORDARequestsAndCache.4DD" package_name="ORDARequestsAndCache" structure_file_name="ORDARequestsAndCache">
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0" data_file_path=":ORDARequestsAndCache.4DD" package_name="ORDARequestsAndCache" structure_file_name="ORDARequestsAndCache">
 		<journal_file journal_file_enabled="false"/>
 	</base_extra>
 </base>
